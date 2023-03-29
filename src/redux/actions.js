@@ -1,13 +1,13 @@
 export const addCar = (car) =>{
     return {
         type: "ADD_CAR",
-        value: "Ford"
+        value: car
     }
 }
 
 export const removeCar = (index) => {
     return {
-        type: "ADD_CAR",
-        value: "Ford"
+        type: "REMOVE_CAR",
+        value: index
     }
 }

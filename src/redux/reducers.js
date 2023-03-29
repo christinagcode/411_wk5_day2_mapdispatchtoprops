@@ -4,11 +4,13 @@ const user = (state = null) => state
 
 // add switch statements in here
 const cars = (state = [], action) => {
-   switch(condition){
+   switch(action.type){
     case  "ADD_CAR":
         return [ ...state, action.value]
     case "REMOVE_CAR": 
-        return splice(action.value, 1)
+         const newState = [...state]
+         newState.splice(action.value, 1)
+         return newState
 
     default: 
     return state
