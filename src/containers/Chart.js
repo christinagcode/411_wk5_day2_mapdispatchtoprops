@@ -1,5 +1,11 @@
+import React from 'react'
+import { connect } from 'react-redux'
+import Chart from '../components/Chart.js'
+
 const mapStateToProps= (state) => {
     return {
-        total: state.cars
+        cars: state.cars
     }
 }
+
+export default connect(mapStateToProps, null)(Chart)
